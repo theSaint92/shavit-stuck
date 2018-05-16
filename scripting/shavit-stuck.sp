@@ -41,13 +41,13 @@ public void OnPluginStart()
 	AutoExecConfig(true, "stuck");
 }
 
-public CVarChange(Handle:convar, const String:oldValue[], const String:newValue[]) 
+public CVarChange(Handle convar, const String oldValue[], const String newValue[]) 
 {	
 	g_iStuckDistance = GetConVarFloat(g_hStuckDistance);
 	g_iStuckEnabled = GetConVarInt(g_hStuckEnabled);
 }
 
-public Event_PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
+public Event_PlayerSpawn(Handle event, const String name[], bool dontBroadcast)
 {		
 	int client = GetClientOfUserId(GetEventInt(event, "userid"));
 	
